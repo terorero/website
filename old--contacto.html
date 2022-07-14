@@ -36,7 +36,7 @@
 				
 				<div id="navigation" class="collapse navbar-collapse flex-column" >
 					<div class="profile-section pt-3 pt-lg-0">
-						<img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.jpg" alt="TeroRERO" >
+						<img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.jpg" alt="image" >
 
                         <div class="bio mb-3">Hola, mi nombre es Devin Richard y soy Analista de Sistemas Senior. Bienvenidos a mi página web personal!</div><!--//bio-->
 						<ul class="social-list list-inline py-2 mx-auto">
@@ -74,7 +74,7 @@
 					</ul>
 					
 					<div class="my-2">
-						<a class="btn btn-primary" href="https://drive.root24.eu.org/apps/forms/4AiJL9PpTbDZctzk" target="_blank"><i class="fas fa-paper-plane mr-2"></i>Contácteme</a>
+						<a class="btn btn-primary" href="http://root.devinconde.com" target="_blank"><i class="fas fa-paper-plane mr-2"></i>Contácteme</a>
 					</div>
 					
 	
@@ -120,27 +120,38 @@
 		    <div class="container">
 			    <form id="contact-form" class="contact-form col-lg-8 mx-lg-auto" method="post" action="">
 			        <h3 class="text-center mb-3">Hablemos!</h3>
-				</form>
-						</div>
-				<div class="verticalhorizontal">
-				<a class="link-on-bg" href="https://drive.root24.eu.org/apps/forms/4AiJL9PpTbDZctzk" target="_blank"><img class="profile-image mb-3 mb-lg-0 ml-lg-5 mr-md-0" src="assets/images/contacto.png" alt="Formulario de contacto"></a>	
+			        <div class="form-row">                                                           
+		                <div class="form-group col-md-6">
+		                    <label class="sr-only" for="cname">Name</label>
+		                    <input type="text" class="form-control" id="cname" name="name" placeholder="Nombre" minlength="2" required="" aria-required="true">
+		                </div>                    
+		                <div class="form-group col-md-6">
+		                    <label class="sr-only" for="cemail">Email</label>
+		                    <input type="email" class="form-control" id="cemail" name="email" placeholder="Email" required="" aria-required="true">
 		                </div>
-				<style>
-				.verticalhorizontal {
-					display: table-cell;
-					height: 50%;
-					text-align: center;
-					width: 50%;
-					vertical-align: middle;
-				}
-				.verticalcenter {
-					display: block;
-					margin-left: auto;
-					  margin-right: auto;
-					  width: 50%;
-				}
-				</style>
-<!--//container-->
+		                <div class="form-group col-12">
+			                <select id="services" class="custom-select" name="services">
+								<option selected>Seleccione el paquete de servicios que le interese...</option>
+								<option value="basic">Soporte en general</option>
+								<option value="standard">GNU/Linux</option>
+								<option value="premium">Virtualización</option>
+								<option value="not sure">Cotización</option>
+							</select>
+							<small class="form-text text-muted pt-1"><i class="fas fa-info-circle mr-2 text-primary"></i>¿Quiere conocer el contenido detallado de cada paquete? Solicite el detalle completo escribiendo a: <a href="mailto:info@devinconde.com" target="_blank">info@devinconde.com</a>.</small>
+						</div>
+		                <div class="form-group col-12">
+		                    <label class="sr-only" for="cmessage">Your message</label>
+		                    <textarea class="form-control" id="cmessage" name="message" placeholder="Escriba su mensaje" rows="10" required="" aria-required="true"></textarea>
+		                </div>
+		                 <div class="form-group col-12">
+		                    <button type="submit" class="btn btn-block btn-primary py-2">Enviar</button>
+		                </div>                           
+		            </div><!--//form-row-->
+				</form>
+				<script>
+					$("#contact-form").validate();
+				</script>
+		    </div><!--//container-->
 	    </section>
 	    
 	    <footer class="footer text-center py-4">
